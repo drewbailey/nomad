@@ -524,7 +524,7 @@ func (s *Server) schedulePeriodic(stopCh chan struct{}) {
 	defer deploymentGC.Stop()
 	csiPluginGC := time.NewTicker(s.config.CSIPluginGCInterval)
 	defer csiPluginGC.Stop()
-	csiVolumeClaimGC := time.NewTicker(s.config.CsiVolumeClaimGCInterval)
+	csiVolumeClaimGC := time.NewTicker(s.config.CSIVolumeClaimGCInterval)
 	defer csiVolumeClaimGC.Stop()
 
 	// getLatest grabs the latest index from the state store. It returns true if
